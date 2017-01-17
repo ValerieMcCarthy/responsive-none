@@ -1,0 +1,11 @@
+<h1>Family Pictures</h1>
+
+<% @pictures.each do |picture| %>
+
+	<img alt="<%= picture.name %>" src="/assets/<%= picture.url %>" width="500"/>
+
+
+<% end %>
+<br>
+<br>
+
