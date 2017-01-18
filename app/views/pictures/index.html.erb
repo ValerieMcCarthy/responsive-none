@@ -1,8 +1,10 @@
 <h1>Family Pictures</h1>
 
+<div>This page lists some random photos from the McCarthy family. They come from the last few years, they are from all over the world, and they include multi generations - of both humans and are beloved pets.</div>
+
 <% @pictures.each do |picture| %>
 
-	<img alt="<%= picture.name %>" src="/assets/<%= picture.url %>" width="500"/>
+	<%= link_to image_tag("/assets/#{picture.url}", width: '500', alt: '#{picture.name}'), picture_path(picture) %>
 
 
 <% end %>
