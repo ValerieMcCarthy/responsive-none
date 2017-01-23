@@ -6,11 +6,10 @@
 <h3>McCarthy Family Pictures</h3>
 <div id=mccarthy >
 <% @pictures.each do |picture| %>
-
+	<% if picture.id <= 6 %>
 	<%= link_to image_tag("/assets/mccarthy/#{picture.url}", width: '500', alt: '#{picture.name}'), picture_path(picture) %>
-
-
-<% end %>
+	<% end %>
+	<% end %>
 </div>
 
 <br>
@@ -21,11 +20,10 @@
 <div id=hasselbring >
 <h3>Hasselbring Family Pictures</h3>
 <% @pictures.each do |picture| %>
-
+	<% if picture.id > 6 %>
 	<%= link_to image_tag("/assets/hasselbring/#{picture.url}", width: '500', alt: '#{picture.name}'), picture_path(picture) %>
-
-
-<% end %>
+	<% end %>
+	<% end %>
 </div>
 
 <br>
